@@ -34,6 +34,13 @@ Break.wav  ──►  Break_001_C1.wav   Break_002_C#1.wav   Break_003_D1.wav ..
 
 ## Building
 
+On a Mac with Xcode installed, one command builds everything, runs the tests
+and installs the VST3 and AU into your user plug-in folders:
+
+```bash
+./scripts/build-mac.sh
+```
+
 Requirements: CMake 3.22+, a C++17 compiler (Xcode on macOS, Visual Studio 2022
 on Windows, GCC/Clang on Linux). JUCE 8 is fetched automatically on first
 configure (network needed once).
