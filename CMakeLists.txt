@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(SampleChopper VERSION 0.1.0 LANGUAGES CXX)
+project(SampleChopper VERSION 0.1.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -13,6 +13,7 @@ endif()
 option(SC_BUILD_CLI     "Build the command-line chopper"                 ON)
 option(SC_BUILD_TESTS   "Build unit tests"                               ON)
 option(SC_BUILD_PLUGIN  "Build the JUCE plugin (VST3 / AU / Standalone)" ON)
+option(SC_COPY_PLUGIN_AFTER_BUILD "Install the plugin into the user plugin folders after building" OFF)
 
 # The DSP + export core. No JUCE dependency; shared by CLI, tests and plugin.
 add_subdirectory(core)
